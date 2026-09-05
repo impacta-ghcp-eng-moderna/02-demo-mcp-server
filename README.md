@@ -234,7 +234,8 @@ sustentada por operações específicas, estruturadas e autenticadas do GitHub.
 
 ## Parte 6 — Investigar os repositórios
 
-Envie:
+Em um novo chat, no modo Agent, com as tools habilitadas conforme a Parte 4,
+envie:
 
 ```text
 Use exclusivamente as tools do GitHub MCP Server para analisar, nesta ordem,
