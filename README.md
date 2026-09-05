@@ -153,15 +153,14 @@ automaticamente pelo VS Code. Para usá-la, copie seu conteúdo para
 
 ## Parte 2 — Inspecionar e limitar as tools
 
-Em **Configure Tools**, localize as tools fornecidas por `github` e deixe
-habilitadas somente:
+Em **Configure Tools**, localize as tools fornecidas por `github`. Para iniciar
+a investigação em modo somente leitura, deixe habilitadas apenas:
 
 - `get_file_contents`, para listar diretórios e ler arquivos;
-- `search_issues`, para verificar duplicidade;
-- `issue_write`, para criar a issue aprovada.
+- `search_issues`, para verificar duplicidade.
 
-Durante a investigação, desabilite `issue_write`. Habilite-a apenas depois que
-o rascunho tiver sido revisado.
+Mantenha `issue_write` desabilitada nesta etapa. A Parte 8 indicará o momento
+de habilitá-la, depois que o rascunho tiver sido revisado e aprovado.
 
 Há quatro camadas diferentes de controle:
 
