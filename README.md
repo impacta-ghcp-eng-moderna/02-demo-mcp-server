@@ -128,8 +128,9 @@ Antes de instalar o servidor:
 
    ```text
    Consulte o estado atual dos repositórios de demonstração do Módulo 2 da
-   organização impacta-ghcp-eng-moderna e informe quais artefatos existem em
-   cada pasta .github. Cite a origem de cada informação.
+   organização GitHub https://github.com/impacta-ghcp-eng-moderna e informe
+   quais artefatos existem em cada pasta .github. Cite a origem de cada
+   informação.
    ```
 
 Observe que o modelo não deve alegar ter consultado conteúdo ao qual nenhuma
