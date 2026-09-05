@@ -192,13 +192,14 @@ automaticamente pelo VS Code. Para usá-la, copie seu conteúdo para
 ## Parte 4 — Inspecionar e limitar as tools
 
 1. Abra um novo Copilot Chat em Agent mode.
-2. Em **Configure Tools**, deixe habilitadas apenas:
+2. Em **Configure Tools**, desmarque todas as tools.
+3. Na seção do GitHub MCP Server, habilite somente:
 
    - `get_file_contents`, para listar diretórios e ler arquivos;
    - `search_issues`, para verificar duplicidade.
 
-3. Envie novamente, sem alterações, o prompt da Parte 1.
-4. Observe as fontes consultadas, as chamadas realizadas e o tempo necessário
+4. Envie novamente, sem alterações, o prompt da Parte 1.
+5. Observe as fontes consultadas, as chamadas realizadas e o tempo necessário
    para produzir a resposta.
 
 Há quatro camadas diferentes de controle:
