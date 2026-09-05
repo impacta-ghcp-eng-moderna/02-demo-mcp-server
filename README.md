@@ -142,7 +142,21 @@ A restrição é feita em **Configure Tools**, e não apenas por uma instrução
 prompt. O texto orienta o modelo; a seleção de tools controla as capacidades
 disponíveis na conversa.
 
-## Parte 2 — Descobrir e instalar o servidor
+## Parte 2 — Observar o comportamento com as tools built-in
+
+Antes de instalar o servidor:
+
+1. abra um novo Copilot Chat em Agent mode;
+2. em **Configure Tools**, deixe habilitadas somente as tools built-in do VS
+   Code;
+3. envie novamente, sem alterações, o prompt da Parte 1;
+4. observe as fontes consultadas, as chamadas realizadas e o tempo necessário
+   para produzir a resposta.
+
+Essa execução mostra o que o agente consegue fazer com as capacidades nativas
+do ambiente, sem uma integração MCP específica com o GitHub.
+
+## Parte 3 — Descobrir e instalar o servidor
 
 O caminho principal usa o servidor remoto público mantido pelo GitHub.
 
@@ -158,7 +172,6 @@ O caminho principal usa o servidor remoto público mantido pelo GitHub.
 5. Quando solicitado, confirme que confia no servidor.
 6. Conclua a autenticação OAuth com a conta GitHub correta.
 7. Execute **MCP: List Servers** e confirme que `github` está ativo.
-8. Abra um novo Copilot Chat em Agent mode e selecione **Configure Tools**.
 
 O servidor remoto usa:
 
@@ -176,13 +189,17 @@ Uma cópia sanitizada da configuração está em
 automaticamente pelo VS Code. Para usá-la, copie seu conteúdo para
 `.vscode/mcp.json` ou para a configuração MCP do perfil.
 
-## Parte 3 — Inspecionar e limitar as tools
+## Parte 4 — Inspecionar e limitar as tools
 
-Em **Configure Tools**, localize as tools fornecidas por `github`. Para iniciar
-a investigação em modo somente leitura, deixe habilitadas apenas:
+1. Abra um novo Copilot Chat em Agent mode.
+2. Em **Configure Tools**, deixe habilitadas apenas:
 
-- `get_file_contents`, para listar diretórios e ler arquivos;
-- `search_issues`, para verificar duplicidade.
+   - `get_file_contents`, para listar diretórios e ler arquivos;
+   - `search_issues`, para verificar duplicidade.
+
+3. Envie novamente, sem alterações, o prompt da Parte 1.
+4. Observe as fontes consultadas, as chamadas realizadas e o tempo necessário
+   para produzir a resposta.
 
 Há quatro camadas diferentes de controle:
 
@@ -194,7 +211,28 @@ Há quatro camadas diferentes de controle:
 Limitar tools reduz capacidade acidental, ruído de seleção e consumo de
 contexto. Isso não reduz, por si só, as permissões da conta no GitHub.
 
-## Parte 4 — Investigar os repositórios
+## Parte 5 — Comparar as execuções
+
+Compare lado a lado as três execuções do mesmo prompt:
+
+1. sem tools;
+2. somente com as tools built-in;
+3. somente com `get_file_contents` e `search_issues` do GitHub MCP Server.
+
+Observe em cada execução:
+
+- se o modelo conseguiu consultar o estado atual dos repositórios;
+- quanto tempo levou para produzir a resposta;
+- quantas chamadas foram necessárias;
+- se as afirmações possuem arquivos e caminhos como evidência;
+- se é possível inspecionar as chamadas, os argumentos e os resultados;
+- quais conclusões dependem de inferência.
+
+A comparação relevante não é entre estilos de resposta, mas entre uma
+solicitação sem tools, uma investigação com capacidades genéricas e outra
+sustentada por operações específicas, estruturadas e autenticadas do GitHub.
+
+## Parte 6 — Investigar os repositórios
 
 Envie:
 
@@ -236,21 +274,7 @@ Uma execução sobre oito repositórios pode variar em duração. Se ela ameaça
 tempo da aula, interrompa depois de duas comparações completas e use
 [`.demo/mcp-demo-fallback.md`](.demo/mcp-demo-fallback.md) para continuar.
 
-## Parte 5 — Comparar as execuções
-
-Compare lado a lado o primeiro chat e a investigação realizada com o GitHub MCP
-Server. Observe:
-
-- se o modelo conseguiu consultar o estado atual dos repositórios;
-- se as afirmações possuem arquivos e caminhos como evidência;
-- se é possível inspecionar as chamadas, os argumentos e os resultados;
-- quais conclusões dependem de inferência em cada execução.
-
-A comparação relevante não é entre estilos de resposta, mas entre uma
-solicitação sem acesso externo e outra sustentada por operações estruturadas e
-autenticadas.
-
-## Parte 6 — Produzir uma síntese
+## Parte 7 — Produzir uma síntese
 
 Depois da investigação, envie:
 
@@ -274,7 +298,7 @@ somente em inferência e remova qualquer conclusão que não esteja apoiada por 
 README ou arquivo consultado.
 ```
 
-## Parte 7 — Procurar duplicidade
+## Parte 8 — Procurar duplicidade
 
 Em seguida, envie:
 
@@ -289,7 +313,7 @@ issues.
 Se existir uma issue equivalente, encerre o fluxo. Encontrar uma duplicidade é
 um resultado correto e evita uma escrita desnecessária.
 
-## Parte 8 — Preparar o rascunho
+## Parte 9 — Preparar o rascunho
 
 Se não houver duplicidade:
 
@@ -314,7 +338,7 @@ Revise:
 - afirmações não comprovadas;
 - escopo e critérios de conclusão.
 
-## Parte 9 — Aprovar e criar
+## Parte 10 — Aprovar e criar
 
 Somente depois da revisão:
 
