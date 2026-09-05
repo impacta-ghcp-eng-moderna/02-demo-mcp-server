@@ -117,7 +117,23 @@ Se já existir um GitHub MCP Server local ou executado em container:
 Não execute dois servidores GitHub com o mesmo propósito durante a demo. Isso
 dificulta identificar qual deles forneceu cada tool.
 
-## Parte 1 — Descobrir e instalar o servidor
+## Parte 1 — Mostrar a diferença sem MCP
+
+Antes de instalar o servidor, abra um chat novo e envie:
+
+```text
+Sem usar terminal, extensões específicas ou servidores MCP, consulte o estado
+atual dos repositórios de demonstração do Módulo 2 da organização
+impacta-ghcp-eng-moderna e informe quais artefatos existem em cada pasta
+.github. Cite a origem de cada informação.
+```
+
+Observe que o modelo não deve alegar ter consultado conteúdo ao qual nenhuma
+tool lhe deu acesso. Dependendo das demais capacidades habilitadas no ambiente,
+ele pode explicar a limitação, pedir os arquivos ou usar outra fonte disponível.
+O ponto não é forçar uma falha, mas inspecionar quais tools sustentam a resposta.
+
+## Parte 2 — Descobrir e instalar o servidor
 
 O caminho principal usa o servidor remoto público mantido pelo GitHub.
 
@@ -133,7 +149,7 @@ O caminho principal usa o servidor remoto público mantido pelo GitHub.
 5. Quando solicitado, confirme que confia no servidor.
 6. Conclua a autenticação OAuth com a conta GitHub correta.
 7. Execute **MCP: List Servers** e confirme que `github` está ativo.
-8. Abra o Copilot Chat em Agent mode e selecione **Configure Tools**.
+8. Abra um novo Copilot Chat em Agent mode e selecione **Configure Tools**.
 
 O servidor remoto usa:
 
@@ -151,7 +167,7 @@ Uma cópia sanitizada da configuração está em
 automaticamente pelo VS Code. Para usá-la, copie seu conteúdo para
 `.vscode/mcp.json` ou para a configuração MCP do perfil.
 
-## Parte 2 — Inspecionar e limitar as tools
+## Parte 3 — Inspecionar e limitar as tools
 
 Em **Configure Tools**, localize as tools fornecidas por `github`. Para iniciar
 a investigação em modo somente leitura, deixe habilitadas apenas:
@@ -168,25 +184,6 @@ Há quatro camadas diferentes de controle:
 
 Limitar tools reduz capacidade acidental, ruído de seleção e consumo de
 contexto. Isso não reduz, por si só, as permissões da conta no GitHub.
-
-## Parte 3 — Mostrar a diferença sem MCP
-
-Desabilite temporariamente o servidor em **MCP: List Servers**, abra um chat
-novo e envie:
-
-```text
-Sem usar terminal, extensões específicas ou servidores MCP, consulte o estado
-atual dos repositórios de demonstração do Módulo 2 da organização
-impacta-ghcp-eng-moderna e informe quais artefatos existem em cada pasta
-.github. Cite a origem de cada informação.
-```
-
-Observe que o modelo não deve alegar ter consultado conteúdo ao qual nenhuma
-tool lhe deu acesso. Dependendo das demais capacidades habilitadas no ambiente,
-ele pode explicar a limitação, pedir os arquivos ou usar outra fonte disponível.
-O ponto não é forçar uma falha, mas inspecionar quais tools sustentam a resposta.
-
-Reabilite o GitHub MCP Server e abra outro chat antes da próxima etapa.
 
 ## Parte 4 — Investigar os repositórios
 
