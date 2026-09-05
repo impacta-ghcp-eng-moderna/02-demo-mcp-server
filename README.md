@@ -239,8 +239,8 @@ Em um novo chat, no modo Agent, com as tools habilitadas conforme a Parte 4,
 envie:
 
 ```text
-Analise, nesta ordem, os seguintes repositórios da organização
-impacta-ghcp-eng-moderna:
+Analise, nesta ordem, os seguintes repositórios da organização GitHub
+https://github.com/impacta-ghcp-eng-moderna:
 
 - 01-lab
 - 02-demo-instructions
