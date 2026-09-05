@@ -277,7 +277,8 @@ tempo da aula, interrompa depois de duas comparações completas e use
 
 ## Parte 7 — Produzir uma síntese
 
-Depois da investigação, envie:
+No mesmo chat da Parte 6, no modo Agent, com as tools habilitadas conforme a
+Parte 4, envie:
 
 ```text
 Com base somente nas evidências coletadas, proponha uma seção chamada
@@ -291,7 +292,7 @@ base apenas no nome do repositório.
 Mostre a proposta, mas não crie nem altere issues ou arquivos.
 ```
 
-Em seguida, peça uma autoverificação:
+No mesmo chat, no modo Agent e com as mesmas tools, envie:
 
 ```text
 Liste as evidências que sustentam a proposta. Identifique afirmações baseadas
@@ -301,7 +302,8 @@ README ou arquivo consultado.
 
 ## Parte 8 — Procurar duplicidade
 
-Em seguida, envie:
+No mesmo chat, no modo Agent e com as tools habilitadas conforme a Parte 4,
+envie:
 
 ```text
 Procure issues abertas em
@@ -316,7 +318,8 @@ um resultado correto e evita uma escrita desnecessária.
 
 ## Parte 9 — Preparar o rascunho
 
-Se não houver duplicidade:
+Se não houver duplicidade, no mesmo chat, no modo Agent e com as tools
+habilitadas conforme a Parte 4, envie:
 
 ```text
 Prepare uma issue para propor a criação de um mapa navegável das demos do
@@ -341,9 +344,10 @@ Revise:
 
 ## Parte 10 — Aprovar e criar
 
-Somente depois da revisão:
+Somente depois da revisão, no mesmo chat e no modo Agent:
 
-1. habilite `issue_write` em **Configure Tools**;
+1. em **Configure Tools**, mantenha as tools da Parte 4 e habilite
+   `issue_write`;
 2. envie:
 
    ```text
