@@ -282,14 +282,8 @@ No mesmo chat da Parte 6, no modo Agent, com as tools habilitadas conforme a
 Parte 4, envie:
 
 ```text
-Primeiro, procure issues abertas equivalentes em
-impacta-ghcp-eng-moderna/02-demo-mcp-server. Considere equivalência de
-conteúdo, não apenas títulos idênticos. Se encontrar uma, informe sua URL e
-encerre sem preparar ou criar outra issue.
-
-Se não houver duplicidade, prepare uma issue em
-impacta-ghcp-eng-moderna/02-demo-mcp-server contendo um mapa navegável das
-demos do Módulo 2.
+Quero preparar uma issue em impacta-ghcp-eng-moderna/02-demo-mcp-server para
+registrar um mapa navegável das demos do Módulo 2.
 
 Para cada demo, inclua:
 
@@ -297,6 +291,12 @@ Para cada demo, inclua:
 - breve síntese do conceito demonstrado;
 - principais artefatos que devem ser observados.
 
+Antes de redigir a issue, procure nesse repositório issues abertas que já
+tenham como objetivo criar ou documentar um mapa ou índice das demos do Módulo
+2. Considere equivalência de conteúdo, não apenas títulos idênticos. Se
+encontrar uma, informe sua URL e encerre sem preparar ou criar outra issue.
+
+Se não houver duplicidade, prepare o título e o corpo da issue descrita acima.
 Use somente as evidências confirmadas nos arquivos consultados. Não preencha
 lacunas com base apenas no nome do repositório e não proponha copiar ou mesclar
 indiscriminadamente arquivos entre os repositórios.
