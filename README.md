@@ -66,21 +66,22 @@ entre os repositórios.
 
 ## Arquitetura
 
-```text
-Instrutor
-    |
-    v
-GitHub Copilot Chat no VS Code       cliente MCP
-    |
-    v
-GitHub MCP Server remoto             servidor MCP
-    |
-    v
-GitHub API                           sistema externo
-    |
-    +-- leitura de arquivos em vários repositórios
-    +-- busca de issues
-    +-- criação de uma issue aprovada
+```mermaid
+flowchart TD
+    instructor[Instrutor]
+    client["GitHub Copilot Chat no VS Code<br/>Cliente MCP"]
+    server["GitHub MCP Server remoto<br/>Servidor MCP"]
+    github["GitHub API<br/>Sistema externo"]
+    files[Leitura de arquivos em vários repositórios]
+    search[Busca de issues]
+    create[Criação de uma issue aprovada]
+
+    instructor --> client
+    client --> server
+    server --> github
+    github --> files
+    github --> search
+    github --> create
 ```
 
 | Elemento | Papel |
