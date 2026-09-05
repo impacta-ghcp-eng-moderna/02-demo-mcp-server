@@ -336,9 +336,6 @@ Somente depois da revisão, no mesmo chat e no modo Agent:
 5. abra a URL retornada;
 6. confirme autoria, destino e conteúdo persistido.
 
-Não use uma única solicitação para investigar e criar a issue. A separação
-entre leitura, rascunho, revisão e escrita é parte da demonstração.
-
 ## Repetir a demonstração
 
 Depois da primeira execução, a busca deve encontrar a issue criada. Não crie
