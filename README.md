@@ -276,74 +276,47 @@ Uma execução sobre oito repositórios pode variar em duração. Se ela ameaça
 tempo da aula, interrompa depois de duas comparações completas e use
 [`.demo/mcp-demo-fallback.md`](.demo/mcp-demo-fallback.md) para continuar.
 
-## Parte 7 — Produzir uma síntese
+## Parte 7 — Preparar a issue
 
 No mesmo chat da Parte 6, no modo Agent, com as tools habilitadas conforme a
 Parte 4, envie:
 
 ```text
-Com base somente nas evidências coletadas, proponha uma seção chamada
-"Mapa das demos do Módulo 2" para o repositório
-impacta-ghcp-eng-moderna/02-demo-mcp-server.
+Primeiro, procure issues abertas equivalentes em
+impacta-ghcp-eng-moderna/02-demo-mcp-server. Considere equivalência de
+conteúdo, não apenas títulos idênticos. Se encontrar uma, informe sua URL e
+encerre sem preparar ou criar outra issue.
 
-Para cada demo, inclua o link do repositório, o conceito principal, os
-artefatos relevantes e o que o aluno deve observar. Não preencha lacunas com
-base apenas no nome do repositório.
+Se não houver duplicidade, prepare uma issue em
+impacta-ghcp-eng-moderna/02-demo-mcp-server contendo um mapa navegável das
+demos do Módulo 2.
 
-Mostre a proposta, mas não crie nem altere issues ou arquivos.
-```
+Para cada demo, inclua:
 
-No mesmo chat, no modo Agent e com as mesmas tools, envie:
+- link do repositório;
+- breve síntese do conceito demonstrado;
+- principais artefatos que devem ser observados.
 
-```text
-Liste as evidências que sustentam a proposta. Identifique afirmações baseadas
-somente em inferência e remova qualquer conclusão que não esteja apoiada por um
-README ou arquivo consultado.
-```
-
-## Parte 8 — Procurar duplicidade
-
-No mesmo chat, no modo Agent e com as tools habilitadas conforme a Parte 4,
-envie:
-
-```text
-Procure issues abertas em
-impacta-ghcp-eng-moderna/02-demo-mcp-server relacionadas à criação de um mapa
-ou índice das demos do Módulo 2. Considere equivalência de conteúdo, não apenas
-títulos idênticos. Informe a consulta e os resultados. Não crie nem altere
-issues.
-```
-
-Se existir uma issue equivalente, encerre o fluxo. Encontrar uma duplicidade é
-um resultado correto e evita uma escrita desnecessária.
-
-## Parte 9 — Preparar o rascunho
-
-Se não houver duplicidade, no mesmo chat, no modo Agent e com as tools
-habilitadas conforme a Parte 4, envie:
-
-```text
-Prepare uma issue para propor a criação de um mapa navegável das demos do
-Módulo 2 em impacta-ghcp-eng-moderna/02-demo-mcp-server.
-
-Use somente as evidências confirmadas. Inclua contexto, tabela proposta,
-critérios de conclusão e a lista de repositórios consultados. Não proponha
-copiar ou mesclar indiscriminadamente arquivos entre os repositórios.
+Use somente as evidências confirmadas nos arquivos consultados. Não preencha
+lacunas com base apenas no nome do repositório e não proponha copiar ou mesclar
+indiscriminadamente arquivos entre os repositórios.
 
 Mostre o título e o corpo completos e aguarde minha aprovação. Não crie a
 issue.
 ```
+
+Se existir uma issue equivalente, encerre o fluxo. Encontrar uma duplicidade é
+um resultado correto e evita uma escrita desnecessária.
 
 Revise:
 
 - repositório de destino;
 - título e corpo;
 - links;
-- evidências citadas;
-- afirmações não comprovadas;
-- escopo e critérios de conclusão.
+- síntese e artefatos de cada demo;
+- afirmações não comprovadas.
 
-## Parte 10 — Aprovar e criar
+## Parte 8 — Aprovar e criar
 
 Somente depois da revisão, no mesmo chat e no modo Agent:
 
@@ -373,7 +346,7 @@ outra issue com título diferente para contornar a deduplicação.
 
 Para repetir:
 
-- execute somente as fases de leitura, síntese e deduplicação;
+- execute somente as fases de leitura e preparação da issue;
 - encerre quando a issue existente for encontrada; ou
 - use um repositório próprio com outra necessidade legítima.
 
