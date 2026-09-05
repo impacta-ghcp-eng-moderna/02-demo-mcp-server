@@ -89,7 +89,7 @@ GitHub API                           sistema externo
 | Servidor MCP | GitHub MCP Server remoto oficial |
 | Identidade | Conta GitHub autenticada por OAuth |
 | Sistema externo | GitHub |
-| Tools | `get_file_contents`, `search_issues` e `issue_write` |
+| Tools iniciais | `get_file_contents` e `search_issues` |
 | Efeito persistente | Uma issue criada no repositório aprovado |
 
 ## Pré-requisitos
@@ -159,9 +159,6 @@ a investigação em modo somente leitura, deixe habilitadas apenas:
 - `get_file_contents`, para listar diretórios e ler arquivos;
 - `search_issues`, para verificar duplicidade.
 
-Mantenha `issue_write` desabilitada nesta etapa. A Parte 8 indicará o momento
-de habilitá-la, depois que o rascunho tiver sido revisado e aprovado.
-
 Há quatro camadas diferentes de controle:
 
 1. permissões da identidade autenticada;
@@ -193,7 +190,7 @@ Reabilite o GitHub MCP Server e abra outro chat antes da próxima etapa.
 
 ## Parte 4 — Investigar os repositórios
 
-Mantenha `issue_write` desabilitada e envie:
+Envie:
 
 ```text
 Use exclusivamente as tools do GitHub MCP Server para analisar, nesta ordem,
@@ -259,7 +256,7 @@ README ou arquivo consultado.
 
 ## Parte 6 — Procurar duplicidade
 
-Ainda sem habilitar `issue_write`, envie:
+Em seguida, envie:
 
 ```text
 Procure issues abertas em
