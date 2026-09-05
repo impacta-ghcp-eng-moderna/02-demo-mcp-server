@@ -117,21 +117,28 @@ Se já existir um GitHub MCP Server local ou executado em container:
 Não execute dois servidores GitHub com o mesmo propósito durante a demo. Isso
 dificulta identificar qual deles forneceu cada tool.
 
-## Parte 1 — Mostrar a diferença sem MCP
+## Parte 1 — Observar o comportamento sem MCP
 
-Antes de instalar o servidor, abra um chat novo e envie:
+Antes de instalar o servidor:
 
-```text
-Sem usar terminal, extensões específicas ou servidores MCP, consulte o estado
-atual dos repositórios de demonstração do Módulo 2 da organização
-impacta-ghcp-eng-moderna e informe quais artefatos existem em cada pasta
-.github. Cite a origem de cada informação.
-```
+1. abra um novo Copilot Chat em Agent mode;
+2. em **Configure Tools**, desmarque todas as tools;
+3. envie:
+
+   ```text
+   Consulte o estado atual dos repositórios de demonstração do Módulo 2 da
+   organização impacta-ghcp-eng-moderna e informe quais artefatos existem em
+   cada pasta .github. Cite a origem de cada informação.
+   ```
 
 Observe que o modelo não deve alegar ter consultado conteúdo ao qual nenhuma
-tool lhe deu acesso. Dependendo das demais capacidades habilitadas no ambiente,
-ele pode explicar a limitação, pedir os arquivos ou usar outra fonte disponível.
-O ponto não é forçar uma falha, mas inspecionar quais tools sustentam a resposta.
+tool lhe deu acesso. Ele pode explicar a limitação ou pedir que os arquivos
+sejam fornecidos. O ponto não é forçar uma resposta específica, mas registrar
+o comportamento sem acesso ao GitHub para compará-lo depois.
+
+A restrição é feita em **Configure Tools**, e não apenas por uma instrução no
+prompt. O texto orienta o modelo; a seleção de tools controla as capacidades
+disponíveis na conversa.
 
 ## Parte 2 — Descobrir e instalar o servidor
 
@@ -227,7 +234,21 @@ Uma execução sobre oito repositórios pode variar em duração. Se ela ameaça
 tempo da aula, interrompa depois de duas comparações completas e use
 [`.demo/mcp-demo-fallback.md`](.demo/mcp-demo-fallback.md) para continuar.
 
-## Parte 5 — Produzir uma síntese
+## Parte 5 — Comparar as execuções
+
+Compare lado a lado o primeiro chat e a investigação realizada com o GitHub MCP
+Server. Observe:
+
+- se o modelo conseguiu consultar o estado atual dos repositórios;
+- se as afirmações possuem arquivos e caminhos como evidência;
+- se é possível inspecionar as chamadas, os argumentos e os resultados;
+- quais conclusões dependem de inferência em cada execução.
+
+A comparação relevante não é entre estilos de resposta, mas entre uma
+solicitação sem acesso externo e outra sustentada por operações estruturadas e
+autenticadas.
+
+## Parte 6 — Produzir uma síntese
 
 Depois da investigação, envie:
 
@@ -251,7 +272,7 @@ somente em inferência e remova qualquer conclusão que não esteja apoiada por 
 README ou arquivo consultado.
 ```
 
-## Parte 6 — Procurar duplicidade
+## Parte 7 — Procurar duplicidade
 
 Em seguida, envie:
 
@@ -266,7 +287,7 @@ issues.
 Se existir uma issue equivalente, encerre o fluxo. Encontrar uma duplicidade é
 um resultado correto e evita uma escrita desnecessária.
 
-## Parte 7 — Preparar o rascunho
+## Parte 8 — Preparar o rascunho
 
 Se não houver duplicidade:
 
@@ -291,7 +312,7 @@ Revise:
 - afirmações não comprovadas;
 - escopo e critérios de conclusão.
 
-## Parte 8 — Aprovar e criar
+## Parte 9 — Aprovar e criar
 
 Somente depois da revisão:
 
